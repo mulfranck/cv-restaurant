@@ -27,12 +27,12 @@ body {
 }
 
 /* header */
-body > header {
+.header {
   background-color: var(--color_p);
   font-size: 100%;
 }
 
-header .container h1 {
+header h1 {
   text-align: center;
   margin: 1.2rem;
   color: #121212;
