@@ -6,6 +6,10 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'main.js',
   },
-}
+
+  module: {
+    rules: [{ test: /\.(jpg|png)$/i, type: 'asset' }],
+  },
+};

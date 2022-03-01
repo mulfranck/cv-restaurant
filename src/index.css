@@ -250,8 +250,8 @@ header .nav-bar ul {
   padding-bottom: 0;
 }
 
-.b-fo article {
-  width: 50%;
+.b-fo > article {
+  flex: 1 0 50%;
 }
 .b-fo img {
   width: 100%;
@@ -278,7 +278,7 @@ header .nav-bar ul {
 }
 
 .row article {
-  flex: 1 0 0;
+  flex: 1;
   max-width: 50%;
   width: 50%;
   margin-right: 1rem;
