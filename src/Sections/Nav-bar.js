@@ -5,7 +5,6 @@ const Navbar = () => {
   const header_el = document.createElement('header');
   const container_el = document.createElement('div');
   const h1_el = document.createElement('h1');
-  const a_el = document.createElement('a');
   const nav_el = document.createElement('nav');
 
   // instead of creating list elements and three anchor elements
