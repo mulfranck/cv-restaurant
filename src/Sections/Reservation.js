@@ -11,7 +11,6 @@ const Reservation = () => {
   const section_res_el = document.createElement('section');
   const container_el = document.createElement('div');
   const header_el = document.createElement('header');
-  const section_form_hold_el = document.createElement('section');
   const article_ads_el = document.createElement('aricle');
   const article_reservation_form_el = document.createElement('aricle');
   const h2_el = document.createElement('h2');
@@ -64,7 +63,7 @@ const Reservation = () => {
   // Assigning classes respective per styling file.
   section_res_el.classList.add('reservation');
   container_el.classList.add('container');
-  section_form_hold_el.classList.add('b-fo');
+  // section_form_hold_el.classList.add('b-fo');
   article_reservation_form_el.classList.add('reservation-form');
   article_row_one_el.classList.add('row');
   article_row_two_el.classList.add('row');
@@ -72,7 +71,6 @@ const Reservation = () => {
 
   // Adding content
   header_el.innerHTML = `<h2>Reserve A Table</h2>`;
-  article_ads_el.innerHTML = `<img src=${ad_el_img} >`;
   h2_el.innerText = `Reservation`;
 
   select_place_el.innerHTML = handle_list_els(num_places, 'option');
@@ -106,11 +104,6 @@ const Reservation = () => {
   article_row_three_el.appendChild(article_place_el);
   article_row_three_el.appendChild(article_submit_el);
 
-  // the form holder has two elements the one with an img and the
-  // actuall form container
-  section_form_hold_el.appendChild(article_ads_el);
-  section_form_hold_el.appendChild(article_reservation_form_el);
-
   // in the actual form there is three elements
   // which are the respective rows
   form_el.appendChild(article_row_one_el);
@@ -119,7 +112,7 @@ const Reservation = () => {
 
   // in container we have the header and the form holder
   container_el.appendChild(header_el);
-  container_el.appendChild(section_form_hold_el);
+  container_el.appendChild(article_reservation_form_el);
 
   // in the section we have only container
   section_res_el.appendChild(container_el);

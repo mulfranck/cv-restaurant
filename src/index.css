@@ -230,58 +230,35 @@ header .nav-bar ul {
 
 /******   RESERVATION SECTION   *******/
 .reservation {
-  height: 80vh;
+  /* height: 80vh; */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background: url('./../asset/first-bg.png') no-repeat center;
   background-position: cover;
 }
-
-.other-reservation {
-  height: 60vh;
-}
-
-.reservation .container {
-  justify-content: space-evenly;
-}
-.reservation .b-fo {
+.reservation .reservation-form {
   background-color: whitesmoke;
-  display: flex;
-
-  padding-right: 1.4rem;
-  padding-bottom: 0;
-}
-
-.b-fo > article {
-  flex: 1 0 50%;
-}
-.b-fo img {
-  width: 100%;
-  height: auto;
-}
-.b-fo h2 {
-  color: #121212;
-  font-size: 1.8rem;
-  padding-top: 0.4rem;
-  text-align: center;
-}
-.b-fo .reservation-form {
-  height: 80%;
-  flex: 1;
+  width: 40%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  margin-left: 1.4rem;
+}
+.reservation h2 {
+  color: #121212;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 .reservation-form .row {
   display: flex;
   margin: 1rem auto;
+  justify-content: center;
 }
 
 .row article {
-  flex: 1;
-  max-width: 50%;
-  width: 50%;
-  margin-right: 1rem;
+  flex: 1 1 50%;
+  text-align: center;
 }
 
 .reservation-form input,
@@ -294,7 +271,7 @@ header .nav-bar ul {
   border-bottom: 0.01rem solid #7f7f7fbe;
   border-radius: 4px;
 
-  width: 10rem;
+  width: 80%; /* width of the form controls */
 }
 .reservation-form input:focus,
 .reservation-form select:focus {
