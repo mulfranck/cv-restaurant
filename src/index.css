@@ -40,7 +40,7 @@ header h1 {
   font-family: 'Spectral', serif;
   width: 60%;
   padding-bottom: 0.8rem;
-  border-bottom: 0.1rem solid var(--color_a);
+  border-bottom: 0.1rem solid rgba(216, 72, 120, 0.644);
 }
 
 header .nav-bar ul {
@@ -48,21 +48,22 @@ header .nav-bar ul {
   justify-content: center;
   text-align: center;
   list-style: none;
+  padding-bottom: 1rem;
 }
-.nav-bar li {
-  padding: 0 1rem 1rem 1rem;
-}
+
 .nav-bar a {
+  padding: 1rem 1rem;
   text-decoration: none;
   color: #121212;
-  opacity: 0.6;
+  opacity: 0.7;
   font-size: 120%;
   font-family: 'Roboto', sans-serif;
 }
 
-.nav-bar li:hover {
+.nav-bar a:hover {
   opacity: 1;
   background-color: rgb(170, 177, 194);
+  cursor: pointer;
 }
 
 /* banner */
@@ -104,9 +105,9 @@ header .nav-bar ul {
   padding: 0.8rem 1.4rem;
   margin: 1rem auto;
   border-radius: 8px;
-  background-color: rgb(186, 97, 127);
+  background-color: rgb(216, 72, 120);
   border: none;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   font-size: 1.4rem;
   color: white;
   text-decoration: none;
@@ -119,7 +120,7 @@ header .nav-bar ul {
 .banner p {
   font-size: 1.4rem;
   margin: 1rem auto;
-  opacity: 0.8;
+  opacity: 0.8345;
 }
 
 /******   FEATURED SECTION   *******/
@@ -208,8 +209,8 @@ header .nav-bar ul {
 }
 .card-footer button {
   padding: 0.6rem 01rem;
-  background-color: rgb(186, 97, 127);
-  opacity: 0.8;
+  background-color: rgb(216, 72, 120);
+  /* opacity: 0.8; */
   border: none;
   color: white;
   font-size: 1rem;
@@ -286,9 +287,9 @@ header .nav-bar ul {
 }
 
 .reservation-form button {
-  background-color: rgb(186, 97, 127);
+  background-color: rgb(216, 72, 120);
   color: white;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /******   MENU CARD ITEM SECTION   *******/
