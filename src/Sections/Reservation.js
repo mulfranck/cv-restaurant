@@ -58,8 +58,6 @@ const Reservation = () => {
   // Adding the option element in the select elements
   select_work_hr_el.innerHTML = handle_list_els(work_hours, 'option');
 
-  console.log(handle_list_els(work_days, 'option'));
-
   // Assigning classes respective per styling file.
   section_res_el.classList.add('reservation');
   container_el.classList.add('container');
