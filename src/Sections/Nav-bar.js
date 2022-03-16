@@ -2,6 +2,7 @@ import _ from 'lodash';
 import { createList, elc } from '../general';
 import Menu from '../pages/Menu';
 import Home from '../pages/Home';
+import { Contact } from '../pages/Contact';
 
 const Navbar = (updater) => {
   // creating the different element need for the navbar section.
@@ -21,7 +22,7 @@ const Navbar = (updater) => {
     console.log(value);
     switch (value.toLowerCase()) {
       case 'contact':
-        console.log('hellow home');
+        updater(Contact());
         break;
       case 'menu':
         updater(Menu());
