@@ -1,6 +1,16 @@
 import _ from 'lodash';
+import Menu from '../pages/Menu';
+let page = '';
+const click_who = () => {
+  if (this.getElementsByTagName('a')[0].innerText == 'menu') {
+    return Menu();
+    console.log('Reached here!');
+  } else {
+    return null;
+  }
+};
 
-const Navbar = () => {
+const Navbar = (prop) => {
   // creating the different element need for the navbar section.
   const header_el = document.createElement('header');
   const container_el = document.createElement('div');
@@ -19,7 +29,7 @@ const Navbar = () => {
 
   // create an arr containing list item
   const nav_items_el_arr = nav_items.map((nav_item) => {
-    return `<li><a onclick=${nav_item}()>${nav_item}</a></li>`;
+    return `<li onclick="click_who()"><a>${nav_item}</a></li>`;
   });
 
   // convert the arr of list items into a string of ul element.
@@ -43,4 +53,4 @@ const Navbar = () => {
   return header_el;
 };
 
-export default Navbar;
+export { Navbar, click_who };
