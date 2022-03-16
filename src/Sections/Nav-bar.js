@@ -1,46 +1,25 @@
 import _ from 'lodash';
+import { createList, elc } from '../general';
 import Menu from '../pages/Menu';
 let page = '';
-const click_who = () => {
-  if (this.getElementsByTagName('a')[0].innerText == 'menu') {
-    return Menu();
-    console.log('Reached here!');
-  } else {
-    return null;
-  }
-};
 
 const Navbar = (prop) => {
   // creating the different element need for the navbar section.
-  const header_el = document.createElement('header');
-  const container_el = document.createElement('div');
-  const h1_el = document.createElement('h1');
-  const nav_el = document.createElement('nav');
+  const nav_el = elc('nav', 'nav-bar');
+  const header_el = elc('header', 'header');
+  const container_el = elc('div', 'container');
 
-  // instead of creating list elements and three anchor elements
-  // create an array, loop through create a string of list anchor tags
-  // and innerhtml.
-  const nav_items = ['home', 'menu', 'contact'];
+  const h1_el = elc('h1');
 
-  // Adding classes to the elements.
-  container_el.classList.add('container');
-  header_el.classList.add('header');
-  nav_el.classList.add('nav-bar');
-
-  // create an arr containing list item
-  const nav_items_el_arr = nav_items.map((nav_item) => {
-    return `<li onclick="click_who()"><a>${nav_item}</a></li>`;
-  });
-
-  // convert the arr of list items into a string of ul element.
-  const nav_items_list_el = _.join(
-    ['<ul>', ...nav_items_el_arr, '</ul>'],
-    ' '
+  const ul_el = createList(
+    'ul',
+    '<a> Home </a>',
+    '<a> Menu </a>',
+    '<a> Contact </a>'
   );
-
   // adding contents into the respective el
   h1_el.innerText = 'Cratley Valley Restaurant';
-  nav_el.innerHTML = nav_items_list_el;
+  nav_el.appendChild(ul_el);
 
   // Adding the elements into the container el for styling properly
   // h1_el first so it be at the top
@@ -53,4 +32,4 @@ const Navbar = (prop) => {
   return header_el;
 };
 
-export { Navbar, click_who };
+export default Navbar;
