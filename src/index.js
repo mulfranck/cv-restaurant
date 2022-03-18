@@ -1,4 +1,3 @@
-// import Banner from './Sections/Banner';
 import { elc } from './general';
 import Home from './pages/Home';
 import Footer from './Sections/Footer';
