@@ -8,7 +8,13 @@ const elc = (tag, content = null, cls) => {
   let el = document.createElement(tag);
 
   // if cls is given then add a class attribute for the element
-  if (cls) el.classList.add(cls);
+  if (cls) {
+    if (cls.indexOf(' ') > -1) {
+      cls.split(' ').forEach((cl) => {
+        el.classList.add(cl);
+      });
+    } else el.classList.add(cls);
+  }
 
   if (content != null) el.innerText = content;
 
@@ -23,4 +29,8 @@ const createList = (type, ...contents) => {
   return el;
 };
 
-export { elc, createList };
+const addChild = (parent, child) => {
+  return parent.appendChild(child);
+};
+
+export { elc, createList, addChild };
