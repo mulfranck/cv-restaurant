@@ -1,9 +1,10 @@
 import img_1 from './../../asset/breakfast_item_1.jpg';
-import img_2 from './../../asset/cherries.jpg';
+import img_2 from './../../asset/breakfast_item_1.jpg';
 import img_3 from './../../asset/breakfast_item_1.jpg';
 import Banner from '../Sections/Banner';
-import { elc } from '../general';
+import { addChild } from '../general';
 import Reservation from '../Sections/Reservation';
+import Feature from '../Sections/Featured';
 
 const home_content = {
   banner: {
@@ -24,17 +25,17 @@ const home_content = {
       },
       card: [
         {
-          prize: '$4.2',
+          price: '$4.2',
           body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Tempore atque, neque reiciend soluta expedita.',
           img: img_1,
         },
         {
-          prize: '$7.9',
+          price: '$7.9',
           body: 'ipsum dolor sit amet consectetur adipisicing elit.Tempore atque, neque reiciend soluta expedita.',
           img: img_2,
         },
         {
-          prize: '$2.1',
+          price: '$2.1',
           body: 'Tempore atque, neque reiciend soluta expedita ipsum dolor sit amet consectetur expedita adipisicing.',
           img: img_3,
         },
@@ -49,9 +50,7 @@ const Home = () => {
   home_el.appendChild(
     Banner(home_content.banner.content, home_content.banner.class_name)
   );
-
-  const h2_el = elc('h2', 'Holllow HOMY');
-  home_el.appendChild(h2_el);
+  addChild(home_el, Feature(home_content.featured.content));
 
   home_el.appendChild(Reservation());
   return home_el;
