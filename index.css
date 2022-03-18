@@ -1,0 +1,319 @@
+:root {
+  --color_p: #cfd6e6;
+  --color_s: rgba(255, 166, 0, 0.794);
+  --color_a: lightblue;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* header */
+.header {
+  background-color: var(--color_p);
+  font-size: 100%;
+}
+
+header h1 {
+  text-align: center;
+  margin: 1.2rem;
+  color: #121212;
+  font-style: italic;
+  font-family: 'Spectral', serif;
+  width: 60%;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.1rem solid rgba(216, 72, 120, 0.644);
+}
+
+header .nav-bar ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+.nav-bar a {
+  padding: 1rem 1rem;
+  text-decoration: none;
+  color: #121212;
+  opacity: 0.7;
+  font-size: 120%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar a:hover {
+  opacity: 1;
+  background-color: rgb(170, 177, 194);
+  cursor: pointer;
+}
+
+/* banner */
+.banner {
+  position: relative;
+  background: url('./../asset/blog_item_03.jpg') no-repeat;
+  background-size: cover;
+  height: 86vh;
+  z-index: 9999; /*works with positioned items*/
+}
+
+/******   OTHER PAGE BANNER   *******/
+.other-banner {
+  height: 30vh;
+}
+
+/* you cann't do .banner:after and have it float the .banner */
+.banner .container::after {
+  content: ''; /* must be define before any property work */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* height: 86vh; same height as the .banner */
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+
+  z-index: -1; /* send the section behind */
+}
+
+.banner .container {
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 100%;
+}
+
+.order {
+  padding: 0.8rem 1.4rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  background-color: rgb(216, 72, 120);
+  border: none;
+  /* opacity: 0.8; */
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+}
+
+.banner h1 {
+  font-size: 2.4rem;
+}
+
+.banner p {
+  font-size: 1.4rem;
+  margin: 1rem auto;
+  opacity: 0.8345;
+}
+
+/******   FEATURED SECTION   *******/
+.featured {
+  height: 100vh;
+  background: url('./../asset/project-item-04.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 999;
+}
+.featured .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.featured .container::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  background-color: #121212;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.featured h2,
+.reservation header h2 {
+  /* margin-top: 4rem; */
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  color: floralwhite;
+}
+
+.featured p {
+  color: #cfd6e6;
+}
+.featured .featured-items {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-items .card {
+  max-width: 18rem;
+  flex: auto;
+  margin: auto 1.4rem;
+  padding: 1rem;
+  background-color: #cfd6e653;
+  border-radius: 8px;
+
+  transition: all 0.2s ease-in;
+}
+
+.card .card-header {
+  position: relative;
+  width: 100%;
+}
+
+.card-header span {
+  position: absolute;
+  bottom: -4px;
+  right: 12px;
+
+  background-color: rgb(186, 97, 127);
+  color: white;
+  padding: 0.4rem 0.8rem;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  margin: 1.6rem auto;
+  text-align: center;
+  font-size: 100%;
+}
+
+.card-footer {
+  text-align: center;
+  margin: 0.8rem auto;
+}
+.card-footer button {
+  padding: 0.6rem 01rem;
+  background-color: rgb(216, 72, 120);
+  /* opacity: 0.8; */
+  border: none;
+  color: white;
+  font-size: 1rem;
+
+  border-radius: 8px;
+}
+
+.card-footer button:hover,
+.reservation button:hover,
+.order:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+/******   RESERVATION SECTION   *******/
+.reservation {
+  /* height: 80vh; */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: url('./../asset/first-bg.png') no-repeat center;
+  background-position: cover;
+}
+.reservation .reservation-form {
+  background-color: whitesmoke;
+  width: 40%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.reservation h2 {
+  color: #121212;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.reservation-form .row {
+  display: flex;
+  margin: 1rem auto;
+  justify-content: center;
+}
+
+.row article {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form button {
+  color: #7f7f7f;
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  border-bottom: 0.01rem solid #7f7f7fbe;
+  border-radius: 4px;
+
+  width: 80%; /* width of the form controls */
+}
+.reservation-form input:focus,
+.reservation-form select:focus {
+  border: 0.01rem solid #7f7f7fbe;
+  border-bottom: none;
+  box-shadow: 1px 1px 5px #121212;
+}
+.reservation-form input:hover,
+.reservation-form select:hover {
+  cursor: pointer;
+  background-color: rgb(212, 222, 241);
+}
+
+.reservation-form button {
+  background-color: rgb(216, 72, 120);
+  color: white;
+  opacity: 0.9;
+}
+
+/******   MENU CARD ITEM SECTION   *******/
+.menu-items .container {
+  flex-direction: row;
+  margin: 2rem auto;
+}
+
+.menu-items .menu-card {
+  width: 25rem;
+  text-align: center;
+  margin: 1.4rem;
+}
+.menu-card img {
+  width: 100%;
+  height: auto;
+}
+
+/******   GENERAL FOOTER SECTION   *******/
+.footer {
+  height: 20vh;
+  background-color: var(--color_p);
+}
+.footer .container {
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
