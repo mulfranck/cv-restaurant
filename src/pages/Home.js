@@ -9,11 +9,9 @@ import Feature from '../Sections/Featured';
 const home_content = {
   banner: {
     class_name: 'banner',
-    content: {
-      p_1: 'Experience eating in a New and Natural environment',
-      h_1: 'Cratley Valley Restaurant',
-      p_2: 'feeling the meal as pampa to your satisfication',
-    },
+    p_1: 'Experience eating in a New and Natural environment',
+    h_1: 'Cratley Valley Restaurant',
+    p_2: 'feeling the meal as pampa to your satisfication',
   },
 
   featured: {
@@ -47,9 +45,7 @@ const home_content = {
 const Home = () => {
   const home_el = document.createElement('section');
 
-  home_el.appendChild(
-    Banner(home_content.banner.content, home_content.banner.class_name)
-  );
+  home_el.appendChild(Banner(home_content.banner));
   addChild(home_el, Feature(home_content.featured.content));
 
   home_el.appendChild(Reservation());

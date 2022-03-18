@@ -1,7 +1,7 @@
 // receive a content object and destructure it into the respective parts
 // first the p tag el above, then the h1 content and finaly the p element last.
 // and a class_name
-const Banner = ({ p_1, h_1, p_2 }, class_name) => {
+const Banner = ({ p_2, h_1, p_1, class_name }) => {
   const section_banner_el = document.createElement('section');
   const container_el = document.createElement('div');
 
@@ -16,7 +16,8 @@ const Banner = ({ p_1, h_1, p_2 }, class_name) => {
   container_el.setAttribute('class', 'container');
   section_banner_el.setAttribute('class', class_name);
 
-  p_el.innerText = p_1;
+  if (p_1) p_el.innerText = p_1;
+
   h1_el.innerText = h_1;
   p_2_el.innerText = p_2;
 
